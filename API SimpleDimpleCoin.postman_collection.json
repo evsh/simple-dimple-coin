@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "d950e3ce-d19c-4ec5-8625-cfff87336050",
+		"name": "API SimpleDimpleCoin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/merchant/tx/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"merchantId\": \"{{merchantId}}\",\n   \"key\":\"{{key}}\",\n   \"tx\":[1]\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/merchant/tx/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"merchant",
+						"tx",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/merchant/send/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"merchantId\": \"{{merchantId}}\",\n    \"key\": \"{{key}}\",\n    \"toId\": 69669411,\n    \"amount\": 1000\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/merchant/send/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"merchant",
+						"send",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/merchant/set/ callback",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"merchantId\": \"{{merchantId}}\",\n    \"key\": \"{{key}}\",\n    \"callback\": \"https://mysite.com/post.php\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/merchant/set/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"merchant",
+						"set",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/merchant/set/ name",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"merchantId\": \"{{merchantId}}\",\n    \"key\": \"{{key}}\",\n    \"name\": \"My shop 19\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/merchant/set/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"merchant",
+						"set",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/merchant/score/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"merchantId\": \"{{merchantId}}\",\n    \"key\": \"{{key}}\",\n    \"userIds\":[100,69669411]\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/merchant/score/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"merchant",
+						"score",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
